@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *helpbutton;
+- (IBAction)helpbutton:(id)sender;
 
 @end
 
@@ -26,4 +28,6 @@
 }
 
 
+- (IBAction)helpbutton:(id)sender {
+}
 @end
