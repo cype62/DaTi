@@ -6,18 +6,59 @@
 //  Copyright © 2018年 BennyChen. All rights reserved.
 //
 
+
+
 #import "ViewController.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *helpbutton;
-- (IBAction)helpbutton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *bjView;
+
+
 
 @end
 
 @implementation ViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    设置状态栏字体掩饰
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+//    UIImage *bj = [UIImage imageNamed:@"bj.jpg"];
+//    UIImageView *bjView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+//
+//    bjView.layer.borderColor = [UIColor greenColor].CGColor;
+//    bjView.layer.borderWidth=2;
+//    bjView.image = bj;
+    
+//    _bjView.layer.borderWidth=1;
+//    _bjView.layer.borderColor = [UIColor greenColor].CGColor;
+//    
+//    _ttt.layer.borderWidth=1;
+//    _ttt.layer.borderColor = [UIColor greenColor].CGColor;
+//    _aaa.layer.borderWidth=1;
+//    _aaa.layer.borderColor = [UIColor greenColor].CGColor;
+//
+//    
+//    _pic.backgroundColor = [UIColor greenColor];
+//    
+//    NSLog(@"%ld+%ld",(long)_answerView.tag,self.view.tag);
+//    
+//    [self.view bringSubviewToFront:_answerView];
+//    
+////    [self.view exchangeSubviewAtIndex:0 withSubviewAtIndex:2];
+//    NSArray *v = self.view.subviews;
+//    for (UIView *view in v) {
+//        if(view.tag == 2){
+//            view.backgroundColor = [UIColor greenColor];
+//            NSLog(@"找到");
+//        }
+//    }
+    
+   
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -28,6 +69,4 @@
 }
 
 
-- (IBAction)helpbutton:(id)sender {
-}
 @end
