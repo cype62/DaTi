@@ -58,8 +58,9 @@
 //    }
     
    
+//    修改提示图片的边框
     _pic.layer.borderColor = [UIColor blueColor].CGColor;
-    _pic.layer.borderWidth = 1;
+    _pic.layer.borderWidth = 3;
     
     // Do any additional setup after loading the view, typically from a nib.
 }
