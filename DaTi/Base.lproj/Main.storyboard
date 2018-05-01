@@ -153,6 +153,9 @@
                                     <constraint firstAttribute="width" secondItem="Epy-SZ-peb" secondAttribute="height" multiplier="242:1" id="vgM-mL-h5F"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="2xK-01-VzG">
+                                <rect key="frame" x="294" y="30" width="20" height="20"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -170,6 +173,7 @@
                             <constraint firstItem="Epy-SZ-peb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="URo-qM-cqI"/>
                             <constraint firstItem="uOd-VC-9Pa" firstAttribute="top" secondItem="2pH-EI-arl" secondAttribute="bottom" constant="20" id="Vct-sO-h3m"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2pH-EI-arl" secondAttribute="trailing" constant="100" id="Wne-ir-4uJ"/>
+                            <constraint firstItem="Lse-Ap-t60" firstAttribute="top" secondItem="2xK-01-VzG" secondAttribute="top" id="YeV-DG-igm"/>
                             <constraint firstItem="RlP-hv-jVZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ajF-99-vDK"/>
                             <constraint firstItem="2pH-EI-arl" firstAttribute="top" secondItem="RlP-hv-jVZ" secondAttribute="bottom" constant="10" id="arw-Wv-XRM"/>
                             <constraint firstItem="glf-cu-rHH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="avH-cd-VMK"/>
@@ -180,6 +184,7 @@
                             <constraint firstItem="Q5D-CH-zeN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="obR-TJ-VZP"/>
                             <constraint firstItem="2pH-EI-arl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="rBQ-TI-jeS"/>
                             <constraint firstItem="glf-cu-rHH" firstAttribute="bottom" secondItem="2pH-EI-arl" secondAttribute="bottom" id="rSc-0k-7Cl"/>
+                            <constraint firstItem="Lse-Ap-t60" firstAttribute="leading" secondItem="2xK-01-VzG" secondAttribute="trailing" constant="5" id="svn-KK-2A2"/>
                             <constraint firstItem="2pH-EI-arl" firstAttribute="top" secondItem="g5p-jz-7ok" secondAttribute="top" id="und-E7-p0U"/>
                             <constraint firstItem="2pH-EI-arl" firstAttribute="top" secondItem="Y2U-MI-b00" secondAttribute="top" id="v5g-TM-0ft"/>
                         </constraints>
@@ -205,6 +210,7 @@
         <image name="btn_left_highlighted" width="70" height="36"/>
         <image name="btn_right" width="70" height="36"/>
         <image name="btn_right_highlighted" width="70" height="36"/>
+        <image name="coin" width="20" height="20"/>
         <image name="icon_help" width="20" height="20"/>
         <image name="icon_img" width="20" height="20"/>
         <image name="icon_tip" width="20" height="20"/>
