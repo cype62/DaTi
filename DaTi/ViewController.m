@@ -58,6 +58,8 @@
 //    }
     
    
+    _pic.layer.borderColor = [UIColor blueColor].CGColor;
+    _pic.layer.borderWidth = 1;
     
     // Do any additional setup after loading the view, typically from a nib.
 }

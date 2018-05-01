@@ -55,23 +55,29 @@
                                     <constraint firstAttribute="height" constant="175" id="9cw-Q1-kkU"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5p-jz-7ok" colorLabel="IBBuiltInLabel-Green">
-                                <rect key="frame" x="20" y="118" width="31" height="30"/>
-                                <state key="normal" title="提示">
-                                    <color key="titleShadowColor" red="1" green="0.88164988043974857" blue="0.22435463964964864" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5p-jz-7ok" colorLabel="IBBuiltInLabel-Green">
+                                <rect key="frame" x="0.0" y="118" width="70" height="36"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <state key="normal" title="提示" image="icon_tip" backgroundImage="btn_left"/>
+                                <state key="highlighted" title="提示" image="icon_tip" backgroundImage="btn_left_highlighted"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2U-MI-b00">
-                                <rect key="frame" x="324" y="118" width="31" height="30"/>
-                                <state key="normal" title="大图"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2U-MI-b00">
+                                <rect key="frame" x="305" y="118" width="70" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="大图" image="icon_img" backgroundImage="btn_right"/>
+                                <state key="highlighted" title="大图" image="icon_img" backgroundImage="btn_right_highlighted"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glf-cu-rHH">
-                                <rect key="frame" x="20" y="263" width="31" height="30"/>
-                                <state key="normal" title="帮助"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glf-cu-rHH">
+                                <rect key="frame" x="0.0" y="257" width="70" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="帮助" image="icon_help" backgroundImage="btn_left"/>
+                                <state key="highlighted" title="帮助" image="icon_help" backgroundImage="btn_left_highlighted"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8h-Qz-Ywi">
-                                <rect key="frame" x="309" y="263" width="46" height="30"/>
-                                <state key="normal" title="下一题"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8h-Qz-Ywi">
+                                <rect key="frame" x="305" y="257" width="70" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="下一题" backgroundImage="btn_right"/>
+                                <state key="highlighted" backgroundImage="btn_right_highlighted"/>
                             </button>
                             <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOd-VC-9Pa">
                                 <rect key="frame" x="0.0" y="313.5" width="375" height="33"/>
@@ -151,11 +157,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Lse-Ap-t60" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="5lY-sS-xtu"/>
-                            <constraint firstItem="g5p-jz-7ok" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6Ij-4f-yPg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F8h-Qz-Ywi" secondAttribute="trailing" constant="20" id="7JB-9Q-LZL"/>
+                            <constraint firstItem="g5p-jz-7ok" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Ij-4f-yPg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F8h-Qz-Ywi" secondAttribute="trailing" id="7JB-9Q-LZL"/>
                             <constraint firstItem="pRh-4w-Fft" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="40" id="7JS-Tq-TYf"/>
                             <constraint firstItem="R2e-yb-NgN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-40" id="EdG-ck-tbH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y2U-MI-b00" secondAttribute="trailing" constant="20" id="FBX-QG-xG8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y2U-MI-b00" secondAttribute="trailing" id="FBX-QG-xG8"/>
                             <constraint firstItem="uOd-VC-9Pa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HFk-dC-uFb"/>
                             <constraint firstItem="Epy-SZ-peb" firstAttribute="top" secondItem="uOd-VC-9Pa" secondAttribute="bottom" constant="30" id="IJp-uT-d2K"/>
                             <constraint firstItem="Q5D-CH-zeN" firstAttribute="top" secondItem="Lse-Ap-t60" secondAttribute="bottom" constant="10" id="KGd-ed-8bs"/>
@@ -166,7 +172,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2pH-EI-arl" secondAttribute="trailing" constant="100" id="Wne-ir-4uJ"/>
                             <constraint firstItem="RlP-hv-jVZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ajF-99-vDK"/>
                             <constraint firstItem="2pH-EI-arl" firstAttribute="top" secondItem="RlP-hv-jVZ" secondAttribute="bottom" constant="10" id="arw-Wv-XRM"/>
-                            <constraint firstItem="glf-cu-rHH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="avH-cd-VMK"/>
+                            <constraint firstItem="glf-cu-rHH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="avH-cd-VMK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q5D-CH-zeN" secondAttribute="trailing" id="fhn-lF-zkS"/>
                             <constraint firstItem="RlP-hv-jVZ" firstAttribute="top" secondItem="Q5D-CH-zeN" secondAttribute="bottom" constant="20" id="gTQ-NH-zLZ"/>
                             <constraint firstItem="F8h-Qz-Ywi" firstAttribute="bottom" secondItem="2pH-EI-arl" secondAttribute="bottom" id="gup-zx-0wT"/>
@@ -195,5 +201,12 @@
     <resources>
         <image name="1" width="458" height="375"/>
         <image name="bj" width="320" height="568"/>
+        <image name="btn_left" width="70" height="36"/>
+        <image name="btn_left_highlighted" width="70" height="36"/>
+        <image name="btn_right" width="70" height="36"/>
+        <image name="btn_right_highlighted" width="70" height="36"/>
+        <image name="icon_help" width="20" height="20"/>
+        <image name="icon_img" width="20" height="20"/>
+        <image name="icon_tip" width="20" height="20"/>
     </resources>
 </document>
