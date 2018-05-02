@@ -9,10 +9,11 @@
 
 
 #import "ViewController.h"
+#import "IdiomModel.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *bjView;
-
+//数组模型
+@property(strong,nonatomic)NSArray *questions;
 
 
 @end
@@ -62,9 +63,38 @@
     _pic.layer.borderColor = [UIColor blueColor].CGColor;
     _pic.layer.borderWidth = 3;
     
+    
+    IdiomModel *model = self.questions[0];
+
+    NSLog(@"%@/n",self.questions);
+    NSLog(@"%@",model.answer);
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+
+
+
+-(NSArray *)questions{
+    if(_questions == nil){
+//        加载plist文件
+        NSString *path = [[NSBundle mainBundle]pathForResource:@"questions" ofType:@"plist"];
+//        使用数组接收plist文件
+        NSArray *dicArr = [NSArray arrayWithContentsOfFile:path];
+//        创建可变数组合，接收dicArr遍历的元素
+        NSMutableArray *mutArr = [NSMutableArray array];
+        for (NSDictionary *dict in dicArr) {
+            IdiomModel *model = [[IdiomModel alloc]init];
+            model.answer = dict[@"answer"];
+            model.title = dict[@"title"];
+            model.options = dict[@"options"];
+            
+            [mutArr addObject:model];
+        }
+        _questions = mutArr;
+    }
+    return _questions;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

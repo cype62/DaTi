@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *ttt;
-@property (weak, nonatomic) IBOutlet UILabel *aaa;
+@property (weak, nonatomic) IBOutlet UILabel *core;
+@property (weak, nonatomic) IBOutlet UILabel *schedule;
+@property (weak, nonatomic) IBOutlet UILabel *titles;
+
+
 @property (weak, nonatomic) IBOutlet UIImageView *pic;
 @property (weak, nonatomic) IBOutlet UIView *answerView;
+@property (weak, nonatomic) IBOutlet UIImageView *bjView;
 
 
 @end
