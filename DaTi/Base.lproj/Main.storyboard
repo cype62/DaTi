@@ -66,6 +66,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="大图" image="icon_img" backgroundImage="btn_right"/>
                                 <state key="highlighted" title="大图" image="icon_img" backgroundImage="btn_right_highlighted"/>
+                                <connections>
+                                    <action selector="expand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3aC-lm-yTH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glf-cu-rHH">
                                 <rect key="frame" x="0.0" y="257" width="70" height="36"/>
@@ -192,6 +195,7 @@
                     </view>
                     <connections>
                         <outlet property="answerView" destination="uOd-VC-9Pa" id="Hdu-yF-pE5"/>
+                        <outlet property="bigpic" destination="Y2U-MI-b00" id="dcO-f8-5FO"/>
                         <outlet property="bjView" destination="BmB-uk-nTo" id="Eyx-0H-iK2"/>
                         <outlet property="core" destination="Lse-Ap-t60" id="PYE-DU-c1l"/>
                         <outlet property="pic" destination="2pH-EI-arl" id="KgP-f5-Zu6"/>
