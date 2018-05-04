@@ -13,10 +13,13 @@
 #import "IdiomModel.h"
 
 
-@interface ViewController ()
+@interface ViewController (){
+    CGRect picFrame;
+    float tframe;
+}
 
+- (IBAction)bt3:(id)sender;
 
-- (IBAction)expand:(id)sender;
 
 @end
 
@@ -26,8 +29,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    把图片置顶
-    [self.view bringSubviewToFront:_pic];
+//    获取初始化的pic坐标和大小
+    picFrame = _pic.frame;
+    
+    tframe = self.view.bounds.size.height;
+    NSLog(@"%f",tframe);
+    
+
 //    设置状态栏字体掩饰
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
@@ -71,11 +79,12 @@
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(makePic)];
     [_pic addGestureRecognizer:singleTap];
     
-    
+//    加载plist文件数据
     Questions *question = [[Questions alloc]init];
     
+    
+    
     IdiomModel *model = question.questions[0];
-
     NSLog(@"%@/n",question.questions);
     NSLog(@"%@",model.answer);
     
@@ -87,50 +96,44 @@
 
 
 //缩放按钮的响事件
-- (IBAction)expand:(id)sender {
 
+- (IBAction)bt3:(id)sender {
     [self makePic];
-    
 }
+
+
+
 
 //图片缩放响应方法
 -(void)makePic{
     
     if (status) {
-        //        status为true，已点击，现在需要复原
+//        status为true，已点击，现在需要复原
         status = false;
-        //        图片复原
+
+//        图片复原
+//        _pic.frame = picFrame;
+        _pic.center = CGPointMake(_pic.center.x, _pic.center.y-100);
         _pic.transform = CGAffineTransformMakeScale(1, 1);
-        _pic.center = CGPointMake(self.pic.center.x, self.pic.center.y-100);
+        
+        NSLog(@"@#@$@");
+        [self takeView];
+//
     }else{
         //        status为false，没点击，现在需要放大
         status = true;
         //        图片放大1.5倍，并移动y轴100
-        _pic.center = CGPointMake(self.pic.center.x, self.pic.center.y+100);
+        NSLog(@"x =%f y = %f",self.pic.center.x,self.pic.center.y);
+        _pic.center = CGPointMake(_pic.center.x, _pic.center.y+100);
+        NSLog(@"x =%f y = %f",self.pic.center.x,self.pic.center.y);
+        
+        
         _pic.transform = CGAffineTransformMakeScale(1.5, 1.5);
-        
-        //        显示阴影
-        //        UIView *yinying = [[UIView alloc]initWithFrame:self.view.bounds];
-        //        yinying.layer.backgroundColor = [UIColor blackColor].CGColor;
-        //        yinying.alpha = 0.5;
-        //        yinying.tag = 4;
-        
-        _pic.layer.shadowColor = [UIColor greenColor].CGColor;//阴影颜色
-        _pic.layer.shadowOffset = CGSizeMake(0, 0);//偏移距离
-        _pic.layer.shadowOpacity = 0.5;//不透明度
-        _pic.layer.shadowRadius = 10.0;//半径
-        
-        
-        
-        //        [self.view addSubview:yinying];
-        //        [self.view exchangeSubviewAtIndex:2 withSubviewAtIndex:4];
-        [self.view bringSubviewToFront:_pic];
-        
-        //        _pic.contentMode = UIBarButtonSystemItemFixedSpace;
-        
+        [self takeView];
     }
     
 }
+
 
 //
 //
@@ -163,7 +166,16 @@
 //    }
 //
 
-
+-(void)takeView{
+    if(status){
+        //        显示阴影
+        [self.view insertSubview:_yinying belowSubview:_pic];
+        
+    }else{
+        //        隐藏阴影
+        [self.view sendSubviewToBack:_yinying];
+    }
+}
 
 
 

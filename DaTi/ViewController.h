@@ -21,6 +21,8 @@
 
 //放大按钮
 @property (weak, nonatomic) IBOutlet UIButton *bigpic;
+//阴影
+@property (weak, nonatomic) IBOutlet UIView *yinying;
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *pic;
