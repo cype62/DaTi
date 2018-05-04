@@ -9,11 +9,12 @@
 
 
 #import "ViewController.h"
+#import "Questions.h"
 #import "IdiomModel.h"
 
+
 @interface ViewController ()
-//数组模型
-@property(strong,nonatomic)NSArray *questions;
+
 
 - (IBAction)expand:(id)sender;
 
@@ -71,9 +72,11 @@
     [_pic addGestureRecognizer:singleTap];
     
     
-    IdiomModel *model = self.questions[0];
+    Questions *question = [[Questions alloc]init];
+    
+    IdiomModel *model = question.questions[0];
 
-    NSLog(@"%@/n",self.questions);
+    NSLog(@"%@/n",question.questions);
     NSLog(@"%@",model.answer);
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -81,26 +84,7 @@
 
 
 
--(NSArray *)questions{
-    if(_questions == nil){
-//        加载plist文件
-        NSString *path = [[NSBundle mainBundle]pathForResource:@"questions" ofType:@"plist"];
-//        使用数组接收plist文件
-        NSArray *dicArr = [NSArray arrayWithContentsOfFile:path];
-//        创建可变数组合，接收dicArr遍历的元素
-        NSMutableArray *mutArr = [NSMutableArray array];
-        for (NSDictionary *dict in dicArr) {
-            IdiomModel *model = [[IdiomModel alloc]init];
-            model.answer = dict[@"answer"];
-            model.title = dict[@"title"];
-            model.options = dict[@"options"];
-            
-            [mutArr addObject:model];
-        }
-        _questions = mutArr;
-    }
-    return _questions;
-}
+
 
 //缩放按钮的响事件
 - (IBAction)expand:(id)sender {

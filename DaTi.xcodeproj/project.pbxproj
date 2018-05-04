@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B233D1B8209C5BE200AE3230 /* MakePic.m in Sources */ = {isa = PBXBuildFile; fileRef = B233D1B7209C5BE200AE3230 /* MakePic.m */; };
+		B233D1BB209C93C300AE3230 /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = B233D1BA209C93C300AE3230 /* Questions.m */; };
 		B29F6C9B2099FC5E00914AEB /* questions.plist in Resources */ = {isa = PBXBuildFile; fileRef = B29F6C9A2099FC5E00914AEB /* questions.plist */; };
 		B29F6C9E2099FCFB00914AEB /* IdiomModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F6C9D2099FCFB00914AEB /* IdiomModel.m */; };
 		B2B07751209614BC0096765F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B07750209614BC0096765F /* AppDelegate.m */; };
@@ -21,6 +22,8 @@
 /* Begin PBXFileReference section */
 		B233D1B6209C5BE200AE3230 /* MakePic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakePic.h; sourceTree = "<group>"; };
 		B233D1B7209C5BE200AE3230 /* MakePic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakePic.m; sourceTree = "<group>"; };
+		B233D1B9209C93C300AE3230 /* Questions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Questions.h; sourceTree = "<group>"; };
+		B233D1BA209C93C300AE3230 /* Questions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Questions.m; sourceTree = "<group>"; };
 		B29F6C9A2099FC5E00914AEB /* questions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = questions.plist; sourceTree = "<group>"; };
 		B29F6C9C2099FCFB00914AEB /* IdiomModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdiomModel.h; sourceTree = "<group>"; };
 		B29F6C9D2099FCFB00914AEB /* IdiomModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdiomModel.m; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 				B29F6C9D2099FCFB00914AEB /* IdiomModel.m */,
 				B233D1B6209C5BE200AE3230 /* MakePic.h */,
 				B233D1B7209C5BE200AE3230 /* MakePic.m */,
+				B233D1B9209C93C300AE3230 /* Questions.h */,
+				B233D1BA209C93C300AE3230 /* Questions.m */,
 			);
 			path = DaTi;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B233D1B8209C5BE200AE3230 /* MakePic.m in Sources */,
+				B233D1BB209C93C300AE3230 /* Questions.m in Sources */,
 				B2B07754209614BD0096765F /* ViewController.m in Sources */,
 				B2B0775F209614BF0096765F /* main.m in Sources */,
 				B29F6C9E2099FCFB00914AEB /* IdiomModel.m in Sources */,
