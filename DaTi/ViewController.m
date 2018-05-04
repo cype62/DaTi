@@ -65,6 +65,10 @@
 //    修改提示图片的边框
     _pic.layer.borderColor = [UIColor blueColor].CGColor;
     _pic.layer.borderWidth = 3;
+//    添加图片的imageView的点击事件
+    _pic.userInteractionEnabled = YES;
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(makePic)];
+    [_pic addGestureRecognizer:singleTap];
     
     
     IdiomModel *model = self.questions[0];
@@ -74,7 +78,6 @@
     
     // Do any additional setup after loading the view, typically from a nib.
 }
-
 
 
 
@@ -102,41 +105,46 @@
 //缩放按钮的响事件
 - (IBAction)expand:(id)sender {
 
+    [self makePic];
+    
+}
+
+//图片缩放响应方法
+-(void)makePic{
     
     if (status) {
-//        status为true，已点击，现在需要复原
+        //        status为true，已点击，现在需要复原
         status = false;
-//        图片复原
+        //        图片复原
         _pic.transform = CGAffineTransformMakeScale(1, 1);
         _pic.center = CGPointMake(self.pic.center.x, self.pic.center.y-100);
     }else{
-//        status为false，没点击，现在需要放大
+        //        status为false，没点击，现在需要放大
         status = true;
-//        图片放大1.5倍，并移动y轴100
+        //        图片放大1.5倍，并移动y轴100
         _pic.center = CGPointMake(self.pic.center.x, self.pic.center.y+100);
         _pic.transform = CGAffineTransformMakeScale(1.5, 1.5);
         
-//        显示阴影
-//        UIView *yinying = [[UIView alloc]initWithFrame:self.view.bounds];
-//        yinying.layer.backgroundColor = [UIColor blackColor].CGColor;
-//        yinying.alpha = 0.5;
-//        yinying.tag = 4;
+        //        显示阴影
+        //        UIView *yinying = [[UIView alloc]initWithFrame:self.view.bounds];
+        //        yinying.layer.backgroundColor = [UIColor blackColor].CGColor;
+        //        yinying.alpha = 0.5;
+        //        yinying.tag = 4;
         
         _pic.layer.shadowColor = [UIColor greenColor].CGColor;//阴影颜色
         _pic.layer.shadowOffset = CGSizeMake(0, 0);//偏移距离
         _pic.layer.shadowOpacity = 0.5;//不透明度
         _pic.layer.shadowRadius = 10.0;//半径
         
-
         
-//        [self.view addSubview:yinying];
-//        [self.view exchangeSubviewAtIndex:2 withSubviewAtIndex:4];
+        
+        //        [self.view addSubview:yinying];
+        //        [self.view exchangeSubviewAtIndex:2 withSubviewAtIndex:4];
         [self.view bringSubviewToFront:_pic];
         
-//        _pic.contentMode = UIBarButtonSystemItemFixedSpace;
+        //        _pic.contentMode = UIBarButtonSystemItemFixedSpace;
         
     }
-    NSLog(@"1111111111");
     
 }
 
