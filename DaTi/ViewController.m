@@ -117,11 +117,19 @@
         _pic.transform = CGAffineTransformMakeScale(1.5, 1.5);
         
 //        显示阴影
-        UIView *yinying = [[UIView alloc]initWithFrame:self.view.bounds];
-        yinying.layer.backgroundColor = [UIColor blackColor].CGColor;
-        yinying.alpha = 0.5;
-        yinying.tag = 4;
-        [self.view addSubview:yinying];
+//        UIView *yinying = [[UIView alloc]initWithFrame:self.view.bounds];
+//        yinying.layer.backgroundColor = [UIColor blackColor].CGColor;
+//        yinying.alpha = 0.5;
+//        yinying.tag = 4;
+        
+        _pic.layer.shadowColor = [UIColor greenColor].CGColor;//阴影颜色
+        _pic.layer.shadowOffset = CGSizeMake(0, 0);//偏移距离
+        _pic.layer.shadowOpacity = 0.5;//不透明度
+        _pic.layer.shadowRadius = 10.0;//半径
+        
+
+        
+//        [self.view addSubview:yinying];
 //        [self.view exchangeSubviewAtIndex:2 withSubviewAtIndex:4];
         [self.view bringSubviewToFront:_pic];
         
